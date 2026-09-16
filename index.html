@@ -1,1 +1,277 @@
-ddddd
+<html style="--chakra-ui-color-mode: light;"><head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="奔富Penfolds">
+    <!-- <meta name="apple-mobile-web-app-title" content="小程序示例"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link id="J_desktopIcon" sizes="114x114" rel="apple-touch-icon-precomposed" href="/images/132.png">
+    <!-- <link id="J_desktopIcon" sizes="114x114" rel="apple-touch-icon-precomposed" href="http://wx.qlogo.cn/mmhead/Q3auHgzwzM7Fll3F71bOWuUvJCZWo1yia2gtXmiaDMcAC0hIsAgJ2UlQ/132"> -->
+    
+	    <script src="js/vue.min.js"></script>
+	
+	<style>
+		html,body{
+			overflow: hidden;
+		}
+		#app{
+			text-align: center;
+			font-size: 15px;
+		}
+		.css-17xejub{
+			
+		}
+		.chakra-image.css-2l24hr{
+			width: 64px;
+			height: 64px;
+			border-radius: 50px;
+		}
+		.chakra-text.css-1yuhvjn{
+			margin-bottom: 15px;
+			margin-top: 16px;
+			color: #373737;
+			font-size: 15px;
+		}
+		.chakra-stack.css-164sloq{
+			font-family: PingFang SC;
+			  color: var(--chakra-colors-gray-800);
+			  line-height: var(--chakra-lineHeights-base);
+			  font-size: 17px;
+			  
+			  display: inline-flex;
+			  /* display: grid; */
+			  grid-template-columns: 16px 80px;
+			  
+			  
+		}
+		.chakra-text.css-ch9s1{
+			font-size: 12px;
+			margin-left: 5px;
+			color: #373737;
+		}
+		.chakra-button.css-r9wwd6{
+			/* display: inline-flex; */
+			  /* appearance: none; */
+			  -moz-box-align: center;
+			  align-items: center;
+			  -moz-box-pack: center;
+			  justify-content: center;
+			  transition: 250ms;
+			  user-select: none;
+			  position: relative;
+			  white-space: nowrap;
+			  vertical-align: middle;
+			  outline: none;
+			  width: 184px;
+			  line-height: 1.2;
+			  
+			  font-weight: var(--chakra-fontWeights-semibold);
+			  
+			  min-width: var(--chakra-sizes-10);
+			  font-size: var(--chakra-fontSizes-md);
+			  padding-inline-start: var(--chakra-space-4);
+			  padding-inline-end: var(--chakra-space-4);
+			  padding-left: 24px;
+			  padding-right: 24px;
+			  background: #07C160 !important;
+			  
+			height: 40px;
+			  border-radius: 5px;
+			  border-color: #fff;
+			  
+			  border: 0px;
+			  color: #fff;
+			
+		}
+		
+		.css-1f8o4mm{
+			color: #373737;
+			
+			
+			flex: 1 1 0%;
+			  place-self: stretch;
+			  max-height: 7.8%;
+			font-size: 11px;
+			  color: #373737;
+		}
+		
+		
+		
+		.chakra-text.css-1akzv8r{
+			font-size: 11px;
+			color: #373737;
+		}
+		
+		#app{
+			height: 100%;
+		}
+		
+		.css-h7mwvq{
+			height: 100%;
+		}
+		
+		.css-164sloq svg{
+			padding-top: 3px;	
+		}
+		
+		.css-1akzv8r{
+			padding-top: 50px;
+			  padding-bottom: 20px;
+		}
+		.cc10{
+			position: fixed;
+			  right: 0px;
+			  left: 0px;
+			  bottom: 0px;
+		}
+		
+		
+		.oow10{
+			margin-top: 40%;
+		}
+	</style>
+	
+	
+	
+	<script>
+      window.onerror = e => {
+        console.error(e)
+        // alert('发生错误' + e)
+      }
+    </script>
+    <style>
+    </style>
+    <!-- weui 样式 -->
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.4.1/weui.min.css">
+    <!-- 调试用的移动端 console -->
+    <script>
+      function initEruda() {
+        if (location.search.indexOf('wxdebug=1') > -1) {
+          eruda.init()
+        }
+      }
+    </script>
+    <!-- <script defer src="https://wxmpurl.cn/cloudbase_res/js/eruda.js" onload="initEruda()"></script> -->
+    <!-- 公众号 JSSDK -->
+    <!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
+    <!-- 云开发 Web SDK -->
+    <!-- <script src="https://res.wx.qq.com/open/js/cloudbase/1.1.0/cloud.js"></script> -->
+    <script>
+      // json
+      // head_img_url, nickname, url_scheme, user_name, path, query
+      function base64Decode (str) {
+        return decodeURIComponent(
+          atob(str)
+            .split('')
+            .map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+            })
+            .join(''),
+        ) 
+      } 
+
+      var test = 'http://wx.qlogo.cn/mmhead/jj4e65x0Px3PQibap7commu9Go9LaWl3ecv2Wou6MfdhRWO72vUG6WzdbU3nGViaVK1bC990ibN2ibs/132'
+      if (test === ('')) {
+        // not from qqmail, use mock
+        // var mockUrlScheme = 'weixin://dl/business/?t=pFawq35qbfd'
+        // try {
+        //   var m = location.href.match(/wxaurl\.cn\/(\w+)/)
+        //   if (m && m[1]) {
+        //     mockUrlScheme = `weixin://dl/business/?t=${m[1]}`
+        //   }
+        // } catch (e) {}
+        // window.data = {
+        //   head_img_url: 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM7Fll3F71bOWuUvJCZWo1yia2gtXmiaDMcAC0hIsAgJ2UlQ/132',
+        //   nickname: '小程序示例',
+        //   url_scheme: mockUrlScheme,
+        //   user_name: 'gh_d43f693ca31f',
+        //   path: 'page/component/index',
+        //   query: 'x=1',
+        // }
+      } else {
+        window.data = {
+          head_img_url: 'http://wx.qlogo.cn/mmhead/jj4e65x0Px3PQibap7commu9Go9LaWl3ecv2Wou6MfdhRWO72vUG6WzdbU3nGViaVK1bC990ibN2ibs/132',
+          nickname: '奔富Penfolds',
+          // url_scheme: 'weixin://dl/business/?t=Vb1cEdDvyyt',
+          // user_name: 'gh_51fff839ee43',
+          path: '/pages/scan/scan',
+          //query: 'cD1ZV05YTU1RMw==',
+          query: base64Decode('cD1ZV05YTU1RMw=='),      
+        }
+      }
+    </script>
+    <!--
+      universal_links_N.js 中 _ 后的数字为版本号（缓存刷新）。
+      发布顺序：必须先上新版本 js，再上本 html。
+      原因：上线有灰度过程，html 与 js 请求可能打到不同机器；
+      若先上 html，灰度机可能已引用新版本号，但尚未部署对应 js，导致加载失败。
+    -->
+    <!-- <script src="js/universal_links_9.js"></script> -->
+  <style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css" data-s=""></style></head>
+
+  <body class="chakra-ui-light">
+	  
+    <div id="app"><div class="css-h7mwvq"><div class="css-y2sgrg"></div>
+	<div class="oow10">
+		<img class="chakra-image css-2l24hr" src="http://wx.qlogo.cn/mmhead/jj4e65x0Px3PQibap7commu9Go9LaWl3ecv2Wou6MfdhRWO72vUG6WzdbU3nGViaVK1bC990ibN2ibs/132">
+		<p class="chakra-text css-1yuhvjn">奔富Penfolds</p>
+		
+		<div class="chakra-stack css-164sloq">
+			<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.3">
+					<g id="微信内场景" transform="translate(-176.000000, -812.000000)" fill="#000000">
+						<g id="icon9" transform="translate(176.000000, 812.000000)">
+							<path d="M11.3361967,8.66050077 L11.1789137,8.66304579 C10.7033442,8.66304579 10.426618,8.31418144 10.6053953,7.91197299 C10.7278216,7.62631149 11.0040274,7.40569744 11.3302259,7.3332391 C12.2029744,7.12257565 12.7959531,6.44047769 12.7959531,5.64749734 C12.7959531,4.68611492 11.8780792,3.90266241 10.7316294,3.90266241 C9.58517963,3.90266241 8.66730564,4.68611492 8.66730564,5.64749734 L8.66730564,10.4398296 C8.66730564,12.1277754 7.15859847,13.4873269 5.30031949,13.4873269 C3.44204051,13.4873269 1.93333333,12.1277754 1.93333333,10.4398296 C1.93333333,8.95977617 3.1015619,7.69644178 4.69329073,7.45623003 L4.82108626,7.45623003 C5.18112878,7.45623003 5.44046858,7.67176377 5.4404683,7.9795716 C5.44062186,8.03231416 5.43934077,8.05668642 5.4341334,8.08793065 C5.42711363,8.13004926 5.41344505,8.17036253 5.39460473,8.20730283 C5.27985616,8.47504949 4.98651411,8.70685787 4.66977413,8.78603673 C3.8033311,8.99517815 3.20404686,9.67311146 3.20404686,10.4398296 C3.20404686,11.401212 4.12192084,12.1846645 5.26837061,12.1846645 C6.41482037,12.1846645 7.33269436,11.401212 7.33269436,10.4398296 L7.33269436,5.64749734 C7.33269436,3.95955157 8.84140153,2.6 10.6996805,2.6 C12.5579595,2.6 14.0666667,3.95955157 14.0666667,5.64749734 C14.0666667,7.13540842 12.9259173,8.38402762 11.3361967,8.66050077 Z" id="图标颜色"></path>
+						</g>
+					</g>
+				</g>
+			</svg>
+			<p class="chakra-text css-ch9s1">小程序</p>
+		</div>
+	</div>
+	<div class="css-17xejub"></div>
+						<div class="cc10">
+						<button type="button" class="chakra-button css-r9wwd6" @click="openwx">打开小程序</button><div class="css-1f8o4mm"></div>
+						<p class="chakra-text css-1akzv8r">本页面服务由深圳市腾讯计算机系统有限公司提供</p>
+						</div>
+						</div><div style="opacity: 0; visibility: hidden; transition: 100ms ease-in-out;"><div class="weui-mask_transparent"></div><div class="weui-toast"><i class="weui-icon-success-no-circle weui-icon_toast"></i><p class="weui-toast__content">已完成</p></div></div></div>
+	
+	
+	
+	
+	<script>
+	    var vm = new Vue({
+			el: '#app',
+			data() {
+	            return {
+	    			p:""
+	            }
+			},
+			created(){
+				
+				if( (navigator.userAgent.toLowerCase()).indexOf('micromessenger') ==-1 ){
+					location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=0000&connect_redirect=1#wechat_redirect"
+				}
+				
+			    let url=window.location.search;
+			    let urlParams = new URLSearchParams(url);
+			    this.p=urlParams.get("p");
+				// console.log(this.p)
+			   
+			},
+			methods: {
+			    openwx(){
+					
+						location.href="https://mypenfs.github.io/#/pages/scan/scan?p="+this.p
+						// location.href="/?p="+this.p
+					
+				}
+			}
+		})
+	</script>
+
+	
+  
+
+</body></html>
